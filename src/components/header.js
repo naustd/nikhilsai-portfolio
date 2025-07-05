@@ -20,7 +20,10 @@ function Header() {
             className="logo rounded-full h-10"
             width="40"
           ></img>
-          <p className="open-sans-description">Nikhilsai Parimalla</p>
+          <p className="open-sans-description">
+            <span className="text-gray-950 font-bold">Nikhilsai</span>{" "}
+            <span className="text-zinc-50 font-bold">Parimalla</span>
+          </p>
         </div>
         <ToggleIcon />
         <div className="md:flex hidden flex-1 items-center justify-end">
