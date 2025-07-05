@@ -28,7 +28,15 @@ export default function SideButtons() {
             />
           </svg>
         </button>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+        <button
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+          onClick={() =>
+            window.open(
+              "https://www.linkedin.com/in/parimalla-nikhilsai-58b1531a4",
+              "_blank"
+            )
+          }
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="32"

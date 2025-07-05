@@ -1,5 +1,7 @@
+import Skills from "../app/Skills";
 import profileImg from "../assets/profilePhoto.jpg";
 import { Typewriter } from "react-simple-typewriter";
+<link defer rel="stylesheet" href="../src/index.css"></link>;
 export default function About() {
   return (
     <>
@@ -54,11 +56,11 @@ export default function About() {
               with RESTful APIs and responsive UIs using Tailwind CSS. I value
               clean code, collaboration, and continuous learning.
             </p>
-            <button className="rounded-md bg-blue-600 hover:bg-blue-700 px-6 py-2 text-white">
-              Contact
-            </button>
+            <button className="buttons">Contact</button>
+            <button className="buttons ml-10">Resume</button>
           </div>
         </div>
+        <Skills />
       </div>
     </>
   );
