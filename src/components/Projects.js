@@ -2,7 +2,11 @@ import projectImage1 from "../assets/projectImage1.png";
 export default function Projects() {
   return (
     <>
+<<<<<<< HEAD
       <section>
+=======
+      <div>
+>>>>>>> master
         <div className="flex flex-col items-center justify-center px-4 py-16 bg-white dark:bg-gray-900">
           <div className="text-center mb-6">
             <h2 className="text-4xl font-bold text-gray-800 dark:text-zinc-50 mb-2">
@@ -44,7 +48,11 @@ export default function Projects() {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
+=======
+      </div>
+>>>>>>> master
     </>
   );
 }
