@@ -16,11 +16,7 @@ export default function Skills() {
           Skills
         </h4>
         <div className="w-14 h-1 bg-blue-600 mb-4 ml-10 flex items-center"></div>
-<<<<<<< HEAD
         <div className="p-8 bg-gray-100 ">
-=======
-        <div className="p-8 bg-gray-100 min-h-screen">
->>>>>>> master
           <div className="grid grid-cols-1 sm:grid-cols-6 md:grid-cols-7 gap-6">
             {skillsData.map((item) => {
               return (

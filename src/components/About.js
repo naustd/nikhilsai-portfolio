@@ -1,19 +1,10 @@
 import Skills from "../app/Skills";
 import profileImg from "../assets/profilePhoto.jpg";
 import { Typewriter } from "react-simple-typewriter";
-<<<<<<< HEAD
-
 export default function About() {
   return (
     <>
       <section className="py-4">
-=======
-<link defer rel="stylesheet" href="../src/index.css"></link>;
-export default function About() {
-  return (
-    <>
-      <div>
->>>>>>> master
         {/* Header Section */}
         <div className="flex flex-col items-center justify-center px-4 py-16 bg-white dark:bg-gray-900">
           <div className="text-center mb-6">
@@ -69,11 +60,7 @@ export default function About() {
           </div>
         </div>
         <Skills />
-<<<<<<< HEAD
       </section>
-=======
-      </div>
->>>>>>> master
     </>
   );
 }
