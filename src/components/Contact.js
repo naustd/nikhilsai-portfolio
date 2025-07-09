@@ -19,7 +19,7 @@ export default function Contact() {
   };
   return (
     <>
-      <section className="py-10">
+      <section className="py-4">
         <div className="flex flex-col items-center justify-center px-4 py-16 bg-white dark:bg-gray-900">
           <div className="text-center">
             <h2 className="text-4xl font-bold text-gray-800 dark:text-zinc-50 mb-2">
@@ -28,7 +28,7 @@ export default function Contact() {
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
           </div>
         </div>
-        <div className="max-w-xl mx-auto p-6 bg-gray-300 rounded-lg shadow-lg mt-10">
+        <div className="max-w-xl mx-auto p-6 bg-gray-300 rounded-lg shadow-lg mt-10   dark:bg-gray-900">
           <form ref={formRef} className="space-y-4" onSubmit={sendEmail}>
             <input
               type="text"
