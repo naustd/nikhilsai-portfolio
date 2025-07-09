@@ -2,7 +2,7 @@ import logoImage from "../assets/samplePortfolioImage.jpg";
 // import { useState } from "react";
 import ToggleIcon from "../app/ToggleIcon";
 
-const Header = ({ setActiveSection, activeSection }) => {
+const Header = ({ activeSection, onNavigate }) => {
   // const [isVertical, setIsVertical] = useState(true);
   // const toggleLayout = () => {
   //   setIsVertical(!isVertical);
@@ -31,14 +31,14 @@ const Header = ({ setActiveSection, activeSection }) => {
                 return (
                   <li
                     key={item}
-                    onClick={() => setActiveSection(item)}
+                    onClick={() => onNavigate(item)}
                     className={`cursor-pointer capitalize hover:text-blue-500 ${
                       activeSection === item
                         ? "text-blue-600 font-semibold"
                         : "text-gray-700"
                     }`}
                   >
-                    {item}
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
                   </li>
                 );
               })}

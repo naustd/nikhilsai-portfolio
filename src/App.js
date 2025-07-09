@@ -13,32 +13,45 @@ import Projects from "./components/Projects";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
-  const renderSection = () => {
-    switch (activeSection) {
-      case "home":
-        return <Home />;
-      case "about":
-        return <About />;
-      case "projects":
-        return <Projects />;
-      case "contact":
-        return <Contact />;
-      // default:
-      //   return <Home />;
+  // const renderSection = () => {
+  //   switch (activeSection) {
+  //     case "home":
+  //       return <Home />;
+  //     case "about":
+  //       return <About />;
+  //     case "projects":
+  //       return <Projects />;
+  //     case "contact":
+  //       return <Contact />;
+  //     // default:
+  //     //   return <Home />;
+  //   }
+  // };
+  const handleNavigate = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(sectionId);
     }
   };
   return (
     <>
-      <div className="min-h-screen font-sans bg-gray-100">
-        <Header
-          setActiveSection={setActiveSection}
-          activeSection={activeSection}
-        />
-        <Home />
-        <About />
-        <Projects />
-        <Contact />
-        <main className="p-4">{renderSection()}</main>
+      <div className="min-h-screen font-sans bg-gray-100 scroll-smooth">
+        <Header setActiveSection={activeSection} onNavigate={handleNavigate} />
+        <section id="home">
+          <Home />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+        {/* <main className="p-4">{renderSection()}</main> */}
         <ThemeToggle />
       </div>
     </>
