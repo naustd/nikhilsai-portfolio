@@ -1,3 +1,4 @@
+import HoverProjLink from "../app/HoverProjLink";
 import projectImage1 from "../assets/projectImage1.png";
 export default function Projects() {
   return (
@@ -11,13 +12,18 @@ export default function Projects() {
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 px-4 py-10">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 px-4 py-10  bg-white dark:bg-gray-900">
           {/* Project Images */}
           <div className="md:basis-1/2 flex flex-col items-center">
-            <img
+            {/* <img
               src={projectImage1}
               alt="Project1"
               className="w-1/2 h-1/2 rounded-md mb-2"
+            /> */}
+            <HoverProjLink
+              imageUrl={projectImage1}
+              siteUrl={`https://web-final-proj-ptuw.vercel.app/home`}
+              altText="Project 1"
             />
           </div>
           {/* Project Description */}
@@ -39,8 +45,7 @@ export default function Projects() {
               experience. This end-to-end development experience reflects my
               ability to build secure, maintainable, and performance-driven
               applications—qualities that are crucial in fast-paced,
-              production-grade environments. Url :
-              https://web-final-proj-ptuw.vercel.app/home
+              production-grade environments.
             </p>
           </div>
         </div>

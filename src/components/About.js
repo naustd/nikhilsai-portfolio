@@ -1,3 +1,4 @@
+import Education from "../app/Education";
 import Skills from "../app/Skills";
 import profileImg from "../assets/profilePhoto.jpg";
 import { Typewriter } from "react-simple-typewriter";
@@ -19,7 +20,7 @@ export default function About() {
         </div>
 
         {/* Content Section */}
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 px-4 py-10">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 px-4 py-10  bg-white dark:bg-gray-900">
           {/* Profile and Typewriter */}
           <div className="md:basis-1/2 flex flex-col items-center">
             <img
@@ -27,7 +28,7 @@ export default function About() {
               alt="Profile"
               className="w-48 h-48 rounded-full mb-6"
             />
-            <p className="text-xl font-semibold text-gray-800 dark:text-white text-center">
+            <p className="text-xl font-semibold text-gray-800  dark:text-gray-300 text-center">
               <Typewriter
                 words={["Nikhilsai Parimalla"]}
                 loop={1}
@@ -55,11 +56,26 @@ export default function About() {
               with RESTful APIs and responsive UIs using Tailwind CSS. I value
               clean code, collaboration, and continuous learning.
             </p>
-            <button className="buttons">Contact</button>
+            <button
+              className="buttons"
+              onClick={() => {
+                const section = document.getElementById("contact");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Contact
+            </button>
             <button className="buttons ml-10">Resume</button>
           </div>
         </div>
-        <Skills />
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 px-4 py-10  bg-white dark:bg-gray-900">
+          <div className="md:basis-1/2 flex flex-col items-center">
+            <Skills />
+          </div>
+          <div className="md:basis-1/2 flex flex-col ">
+            <Education />
+          </div>
+        </div>
       </section>
     </>
   );
