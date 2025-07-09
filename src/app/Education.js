@@ -39,8 +39,7 @@ export default function Education() {
               />
             </div>
             <div className="text-center md:text-left">
-              <p className="text-lg font-semibold">Osmania University</p>
-              <p>Bachelor's in ECE</p>
+              <p className="text-lg font-semibold">Bachelor's in ECE</p>
               <p>2018 - 2021 </p>
               <p>Hyderabad, TG, India</p>
             </div>
