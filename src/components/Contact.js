@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { sendForm } from "emailjs-com";
+import Footer from "../app/Footer";
 export default function Contact() {
   const formRef = useRef();
   const sendEmail = async (e) => {
@@ -27,41 +28,41 @@ export default function Contact() {
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
           </div>
+          <div className="max-w-xl mx-auto p-6 bg-gray-300 rounded-lg shadow-lg mt-10   dark:bg-zinc-50">
+            <form ref={formRef} className="space-y-4" onSubmit={sendEmail}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+                className="w-full p-3 border rounded-md dark:border-black"
+              />
+              <input
+                type="email"
+                name="user_email"
+                placeholder="Email Address"
+                required
+                className="w-full p-3 border rounded-md dark:border-black"
+              />
+              <input
+                type="mobile"
+                name="user_mobile"
+                placeholder="Mobile Number"
+                required
+                className="w-full p-3 border rounded-md dark:border-black"
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                required
+                rows={4}
+                className="w-full p-3 border rounded-md dark:border-black"
+              />
+              <button className="buttons">Send</button>
+            </form>
+          </div>
         </div>
-        <div className="max-w-xl mx-auto p-6 bg-gray-300 rounded-lg shadow-lg mt-10   dark:bg-gray-900">
-          <form ref={formRef} className="space-y-4" onSubmit={sendEmail}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              required
-              className="w-full p-3 border rounded-md"
-            />
-            <input
-              type="email"
-              name="user_email"
-              placeholder="Email Address"
-              required
-              className="w-full p-3 border rounded-md"
-            />
-            <input
-              type="mobile"
-              name="user_mobile"
-              placeholder="Mobile Number"
-              required
-              className="w-full p-3 border rounded-md"
-            />
-
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              required
-              rows={4}
-              className="w-full p-3 border rounded-md"
-            />
-            <button className="buttons">Send</button>
-          </form>
-        </div>
+        <Footer />
       </section>
     </>
   );

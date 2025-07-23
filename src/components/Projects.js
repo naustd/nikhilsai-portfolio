@@ -1,6 +1,8 @@
 import HoverProjLink from "../app/HoverProjLink";
 import projectImage1 from "../assets/projectImage1.png";
+import React, { useState } from "react";
 export default function Projects() {
+  const [isExpanded, setIsExpanded] = useState(false);
   return (
     <>
       <section>
@@ -28,7 +30,11 @@ export default function Projects() {
           </div>
           {/* Project Description */}
           <div className="md:basis-1/2 text-center md:text-left">
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p
+              className={`text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed transition-all duration-300 ease-in-out ${
+                isExpanded ? "line-clamp-none" : "line-clamp-6"
+              }`}
+            >
               As a Full-Stack Developer, I have built dynamic and responsive
               user interfaces using ReactJS, leveraging advanced features like
               Hooks, Context API, and React Router to enhance component
@@ -47,6 +53,12 @@ export default function Projects() {
               applications—qualities that are crucial in fast-paced,
               production-grade environments.
             </p>
+            <button
+              onClick={() => setIsExpanded((prev) => !prev)}
+              className="text-blue-600 font-medium hover:underline focus:outline-none"
+            >
+              {isExpanded ? "Show Less" : "Show More"}
+            </button>
           </div>
         </div>
       </section>

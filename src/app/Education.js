@@ -9,7 +9,7 @@ export default function Education() {
         </h4>
         <div className="w-14 h-1 bg-blue-600 mb-4 ml-10 flex items-center"></div>
         <div className="p-4 bg-gray-100 rounded-md flex flex-col md:flex-row md:items-start ">
-          <div className="flex flex-col md:flex-row items-cente md:items-start gap-4 md:gap-10">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-10">
             {/* Logo */}
             <div className="items-center w-32 h-32 flex-shrink-0">
               <img
@@ -29,9 +29,9 @@ export default function Education() {
             {/* Beside we need give details like */}
             {/* collegeName, Degree ,years, Address */}
           </div>
-          <div className=" flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-10">
+          <div className=" flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-10">
             {/* Logo */}
-            <div className="w-32 h-32 flex-shrink-0">
+            <div className="w-32 h-32 items center flex-shrink-0">
               <img
                 src={OULogo}
                 alt="Bacherlors"

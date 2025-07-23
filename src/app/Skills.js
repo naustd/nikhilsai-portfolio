@@ -7,7 +7,10 @@ export default function Skills() {
     { id: 4, skill: "Spring Boot" },
     { id: 5, skill: "Spring" },
     { id: 6, skill: "Oracle Sql" },
-    { id: 7, skill: "HTML" },
+    { id: 7, skill: "Angular" },
+    { id: 8, skill: "GitHub" },
+    { id: 9, skill: "AWS" },
+    { id: 10, skill: "Dynamo DB" },
   ];
   return (
     <>
@@ -17,7 +20,7 @@ export default function Skills() {
         </h4>
         <div className="w-14 h-1 bg-blue-600 mb-4 ml-10 flex items-center"></div>
         <div className="p-4 bg-gray-100 rounded-md ">
-          <div className="grid grid-cols-1 sm:grid-cols-6 md:grid-cols-7 gap-2">
+          <div className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 gap-2">
             {skillsData.map((item) => {
               return (
                 <div
