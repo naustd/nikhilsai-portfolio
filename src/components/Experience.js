@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Experience() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
   const experiences = [
     {
       year: "2017",
@@ -26,6 +28,22 @@ export default function Experience() {
     },
   ];
 
+  // Detect screen size on initial load
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const handleToggle = (index) => {
+    if (isMobile) {
+      setHoveredIndex((prev) => (prev === index ? null : index));
+    }
+  };
+
   return (
     <section className="bg-white dark:bg-gray-900 py-8 px-4">
       <div className="text-center mb-6">
@@ -35,16 +53,13 @@ export default function Experience() {
         <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
       </div>
 
-      {/* Centering container */}
       <div className="relative flex justify-center">
-        {/* Full width to allow proper centering */}
         <div className="w-full max-w-6xl relative">
-          {/* Center Timeline Line */}
           <div className="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-0.5 bg-blue-500 z-0"></div>
 
           {experiences.map((exp, index) => {
             const isEven = index % 2 === 0;
-            const isHovered = hoveredIndex === index;
+            const isActive = hoveredIndex === index;
 
             return (
               <div
@@ -52,20 +67,14 @@ export default function Experience() {
                 className={`relative mb-16 flex ${
                   isEven ? "justify-start" : "justify-end"
                 }`}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                onMouseEnter={() => !isMobile && setHoveredIndex(index)}
+                onMouseLeave={() => !isMobile && setHoveredIndex(null)}
+                onClick={() => handleToggle(index)}
               >
                 {/* Timeline Dot */}
-                {/* <div
-                  className={`absolute left-1/2 transform -translate-x-1/2 top-5 w-4 h-4 rounded-full z-10 transition-all duration-300 ${
-                    isHovered
-                      ? "bg-blue-600 ring-4 ring-blue-300 scale-125"
-                      : "bg-blue-500"
-                  }`}
-                ></div> */}
                 <div
                   className={`hidden md:block absolute left-1/2 transform -translate-x-1/2 top-5 w-4 h-4 rounded-full z-10 transition-all duration-300 ${
-                    isHovered
+                    isActive
                       ? "bg-blue-600 ring-4 ring-blue-300 scale-125"
                       : "bg-blue-500"
                   }`}
@@ -79,7 +88,7 @@ export default function Experience() {
                 >
                   <div
                     className={`bg-white p-4 rounded-xl shadow-md border border-blue-100 group-hover:shadow-lg transition-all duration-300 cursor-pointer group-hover:scale-[1.02] group-hover:bg-blue-50 ${
-                      isHovered ? "ring-1 ring-blue-200" : ""
+                      isActive ? "ring-1 ring-blue-200" : ""
                     }`}
                   >
                     <h3 className="text-xl font-semibold text-blue-700">
@@ -94,7 +103,7 @@ export default function Experience() {
                     </p>
                     <div
                       className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        isHovered ? "max-h-40 mt-4" : "max-h-0"
+                        isActive ? "max-h-60 mt-4" : "max-h-0"
                       }`}
                     >
                       <p className="text-gray-700">{exp.description}</p>

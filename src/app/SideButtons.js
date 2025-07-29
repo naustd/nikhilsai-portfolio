@@ -1,7 +1,38 @@
-export default function SideButtons() {
+import React, { useEffect, useState } from "react";
+const SideButtons = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  useEffect(() => {
+    const target = document.getElementById("skills-section");
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(false);
+          } else {
+            setIsVisible(true);
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1,
+      }
+    );
+    observer.observe(target);
+    return () => {
+      if (target) observer.unobserve(target);
+    };
+  }, []);
   return (
     <>
-      <div className="fixed top-1/3 left-0 hidden md:flex flex-col  p-2 bg-gray-100 dark:bg-gray-800 shadow-lg rounded-r-lg">
+      <div
+        className={`fixed top-1/3 left-0 hidden md:flex flex-col p-2 bg-gray-100 dark:bg-gray-800 shadow-lg rounded-r-lg transition-opacity duration-300 ${
+          isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        id="sidebar"
+      >
         <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -65,4 +96,6 @@ export default function SideButtons() {
       </div>
     </>
   );
-}
+};
+
+export default SideButtons;

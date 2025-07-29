@@ -70,7 +70,7 @@ export default function About() {
         </div>
         <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 px-4 py-10  bg-white dark:bg-gray-900">
           <div className="md:basis-1/2 flex flex-col items-center">
-            <Skills />
+            <Skills id="hide-target" />
           </div>
           <div className="md:basis-1/2 flex flex-col ">
             <Education />
