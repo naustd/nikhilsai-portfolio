@@ -1,6 +1,6 @@
 import Education from "../app/Education";
 import Skills from "../app/Skills";
-import profileImg from "../assets/profilePhoto.jpg";
+import profileImg from "../assets/ProfileImg.jpg";
 import { Typewriter } from "react-simple-typewriter";
 export default function About() {
   return (
@@ -26,8 +26,9 @@ export default function About() {
             <img
               src={profileImg}
               alt="Profile"
-              className="w-48 h-48 rounded-full mb-6"
+              className="w-48 h-48 rounded-2xl mb-4  shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out"
             />
+
             <p className="text-xl font-semibold text-gray-800  dark:text-gray-300 text-center">
               <Typewriter
                 words={["Nikhilsai Parimalla"]}

@@ -24,7 +24,7 @@ export default function Skills() {
             {skillsData.map((item) => (
               <div
                 key={item.id}
-                className="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105 hover:ring-2 hover:ring-indigo-400 cursor-pointer"
+                className="bg-white p-1 rounded-2xl shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105 hover:ring-2 hover:ring-indigo-400 cursor-pointer"
               >
                 <p className="text-center text-gray-800 text-sm sm:text-base md:text-md font-semibold break-words">
                   {item.skill}

@@ -1,4 +1,4 @@
-import logoImage from "../assets/samplePortfolioImage.jpg";
+import logoImage from "../assets/ProfileImg.jpg";
 import { useEffect, useState } from "react";
 import ToggleIcon from "../app/ToggleIcon";
 
@@ -53,7 +53,7 @@ const Header = ({ activeSection, onNavigate }) => {
               src={logoImage}
               alt="myImage"
               className="logo rounded-full h-10"
-              width="40"
+              width="38"
             ></img>
             <p className="open-sans-description">
               <span className="text-gray-950 font-bold">Nikhilsai</span>{" "}
