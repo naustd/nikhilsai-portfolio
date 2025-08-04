@@ -31,27 +31,29 @@ export default function Projects() {
           {/* Project Description */}
           <div className="md:basis-1/2 text-center md:text-left">
             <p
-              className={`text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed transition-all duration-300 ease-in-out ${
+              className={`text-md text-justify text-gray-700 dark:text-gray-300 mb-6 leading-relaxed transition-all duration-300 ease-in-out ${
                 isExpanded ? "line-clamp-none" : "line-clamp-6"
               }`}
             >
-              As a Full-Stack Developer, I have built dynamic and responsive
-              user interfaces using ReactJS, leveraging advanced features like
-              Hooks, Context API, and React Router to enhance component
-              reusability, state management, and seamless navigation. On the
-              backend, I developed secure and efficient RESTful APIs using
-              Spring Boot, implementing authentication and role-based access
-              control to safeguard sensitive data and ensure proper user
-              permissions. To support robust and scalable application logic, I
-              designed PostgreSQL databases optimized for high-performance
-              querying, effective data modeling, and minimal redundancy. I
-              ensured smooth integration between the front-end and back-end by
-              enabling seamless data exchange through Axios and Spring Boot’s
-              JSON serialization, resulting in a cohesive, real-time user
-              experience. This end-to-end development experience reflects my
-              ability to build secure, maintainable, and performance-driven
-              applications—qualities that are crucial in fast-paced,
-              production-grade environments.
+              Developed a responsive, user-friendly front-end using ReactJS with
+              Hooks, Context API, and React Router DOM, ensuring seamless
+              navigation and efficient state management. Employed Tailwind CSS
+              to implement a mobile-first design strategy, delivering a
+              consistent user experience across all screen sizes. Designed and
+              implemented secure, layered RESTful APIs using Spring Boot,
+              incorporating JWT-based authentication, role-based access control
+              (RBAC), and Spring Security filters to protect endpoints and
+              ensure data compliance. Built normalized PostgreSQL schemas and
+              optimized SQL/JPQL queries using Spring Data JPA to enable
+              high-performance CRUD operations for user and product data.
+              Integrated React with Spring Boot through Axios and JSON
+              serialization, ensuring smooth real-time communication, robust
+              error handling, and responsive feedback mechanisms. Managed build
+              processes with Maven, implemented clean code practices, and
+              maintained version control with Git and GitHub. Actively
+              contributed to Agile workflows including sprints, stand-ups, and
+              code reviews to ensure timely feature delivery and effective
+              collaboration across the development team.
             </p>
             <button
               onClick={() => setIsExpanded((prev) => !prev)}

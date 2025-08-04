@@ -47,10 +47,10 @@ export default function Home() {
             continuously learning new technologies.
             <FaQuoteRight />
           </p> */}
-          <h2 className="text-2xl md:text-6xl font-extrabold text-gray-800 dark:text-white mb-6 flex items-center justify-center gap-1">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 dark:text-white mb-4 sm:mb-6 flex items-center justify-center gap-1 sm:gap-2">
             HEY I
             <svg
-              className="w-8 h-10 md:w-12 md:h-12 animate-bounce"
+              className="w-6 h-8 sm:w-8 sm:h-10 md:w-10 md:h-12 animate-bounce"
               viewBox="0 0 24 24"
               fill="#3B82F6"
               xmlns="http://www.w3.org/2000/svg"
@@ -61,23 +61,15 @@ export default function Home() {
             M NIKHILSAI PARIMALLA
           </h2>
 
-          {/* <p className="text-lg md:text-2xl text-gray-700 dark:text-gray-300 mb-4 leading-relaxed max-w-2xl mx-auto">
-            <span className="inline-flex items-center gap-2">
-              <FaQuoteLeft className="text-blue-500" />
-              A passionate Full Stack Developer crafting scalable, elegant, and
-              secure applications.
-              <FaQuoteRight className="text-blue-500" />
-            </span>
-          </p> */}
-          <div className="relative max-w-2xl mx-auto text-center mb-6">
-            <FaQuoteLeft className="absolute left-0 top-0 text-3xl text-blue-500 -translate-x-8 -translate-y-1" />
+          <div className="relative max-w-2xl mx-auto text-center mb-4 sm:mb-6 px-4 sm:px-0">
+            <FaQuoteLeft className="absolute left-0 top-0 text-xl sm:text-2xl md:text-3xl text-blue-500 -translate-x-6 sm:-translate-x-8 -translate-y-1" />
 
-            <p className="text-lg md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
               A passionate Full Stack Developer crafting scalable, elegant, and
               secure applications.
             </p>
 
-            <FaQuoteRight className="absolute right-0 bottom-0 text-3xl text-blue-500 translate-x-8 translate-y-1" />
+            <FaQuoteRight className="absolute right-0 bottom-0 text-xl sm:text-2xl md:text-3xl text-blue-500 translate-x-6 sm:translate-x-8 translate-y-1" />
           </div>
 
           <button

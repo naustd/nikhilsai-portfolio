@@ -20,7 +20,7 @@ export default function About() {
         </div>
 
         {/* Content Section */}
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 px-4 py-10  bg-white dark:bg-gray-900">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 px-2 py-10  bg-white dark:bg-gray-900">
           {/* Profile and Typewriter */}
           <div className="md:basis-1/2 flex flex-col items-center">
             <img
@@ -45,17 +45,23 @@ export default function About() {
 
           {/* Bio Text and Contact Button */}
           <div className="md:basis-1/2 text-center md:text-left">
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              I am a passionate and results-driven full-stack developer with a
-              strong foundation in Java, Spring Boot, React.js, and PostgreSQL.
-              With over two years of experience at Tata Consultancy Services, I
-              developed and maintained scalable enterprise-level applications
-              while working in agile teams. Currently pursuing a Master’s in
-              Information Technology at Northern Arizona University with a GPA
-              of 3.83, I continue to grow my skills in Kafka, GraphQL, FastAPI,
-              and cloud computing. I’ve built secure full-stack applications
-              with RESTful APIs and responsive UIs using Tailwind CSS. I value
-              clean code, collaboration, and continuous learning.
+            <p className="text-md text-gray-700 dark:text-gray-300 mb-6 leading-relaxed text-justify">
+              I'm a passionate Java Full Stack Developer with over 4 years of
+              industry experience in building scalable, secure, and
+              high-performance web applications across finance, healthcare, and
+              education sectors. My core expertise lies in Java 17, Spring Boot,
+              React.js, and RESTful APIs, combined with strong knowledge of
+              cloud platforms like AWS and GCP, DevOps tools like Jenkins and
+              Docker, and CI/CD automation. I’ve developed microservices with
+              secure access using JWT, OAuth2, and Spring Security, and worked
+              extensively with PostgreSQL, Oracle, and MongoDB for efficient
+              data handling. I’ve also mentored students at Northern Arizona
+              University, conducted workshops on secure API design, and
+              optimized databases in high-concurrency environments. My work is
+              driven by clean code, performance, and user-first design. I thrive
+              in Agile teams, follow TDD practices, and consistently deliver
+              reliable and maintainable solutions. I'm always eager to learn,
+              collaborate, and innovate with modern technologies.
             </p>
             <button
               className="buttons"
@@ -66,10 +72,19 @@ export default function About() {
             >
               Contact
             </button>
-            <button className="buttons ml-10">Resume</button>
+            <button
+              className="buttons ml-10"
+              onClick={() => {
+                window.open(
+                  "https://drive.google.com/file/d/1pcZT6RGw1sPVeYgpujCkt1oSlACwo8vK/view?usp=sharing"
+                );
+              }}
+            >
+              Resume
+            </button>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 px-4 py-10  bg-white dark:bg-gray-900">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 px-2 py-10  bg-white dark:bg-gray-900">
           <div className="md:basis-1/2 flex flex-col items-center">
             <Skills id="hide-target" />
           </div>

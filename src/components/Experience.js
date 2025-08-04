@@ -6,25 +6,39 @@ export default function Experience() {
 
   const experiences = [
     {
-      year: "2017",
       company: "Northern Arizona University",
-      role: "Frontend Developer",
-      duration: "1.5 yrs",
-      description: "Built reusable UI components using React and Redux.",
+      role: "Graduate Teaching Assistant",
+      duration: "6 Months",
+      description: `
+      1. Mentored students in React.js, Spring Boot, and RESTful APIs, emphasizing modular code structure, clean patterns, and best practices in full-stack development.
+
+      2. Led workshops on secure API development with JWT, OAuth2, HTTPS, and Spring Security, demonstrating real-world vulnerabilities and effective mitigation techniques.
+
+      3. Conducted PostgreSQL labs covering indexing, query tuning, and transaction management, and optimized front-end performance with debouncing, lazy loading, and Redux state control.
+
+    `,
     },
     {
-      year: "2018.5",
       company: "Tata Consultancy Services",
       role: "Full Stack Developer",
       duration: "2 yrs",
-      description: "Developed full-stack apps using Spring Boot and React.",
+      description: `
+      1. Developed Spring Boot microservices, implemented business logic, APIs, and validation; ensured secure transactions and scalable CRUD operations.
+
+      2. Built dynamic React.js UIs with real-time validation, integrated Spring backend, and migrated monolith to modular microservices architecture.
+
+      3. Used Hibernate, Oracle SQL, AWS EC2, and JUnit; handled deployments, test coverage, Agile ceremonies, and performance tuning in cloud setups.`,
     },
     {
-      year: "2020.5",
       company: "ECIL",
-      role: "Senior Developer",
+      role: "Java Intern",
       duration: "1 yr",
-      description: "Led UI team, introduced Storybook for component testing.",
+      description: `
+      1. Built RESTful APIs using Spring Boot, applied OOP principles, and wrote unit tests with JUnit and Mockito for components.
+
+      2. Integrated Java backend with React.js and Thymeleaf frontends, deployed on AWS EC2/S3, and automated builds using Jenkins.
+
+      3. Supported PostgreSQL CRUD operations, optimized queries, built microservices with Spring Cloud, and collaborated via Git, JIRA, and Confluence in Agile.`,
     },
   ];
 
@@ -94,7 +108,7 @@ export default function Experience() {
                     <h3 className="text-xl font-semibold text-blue-700">
                       {exp.company}
                     </h3>
-                    <p className="text-sm text-gray-500 mb-2">{exp.year}</p>
+
                     <p className="text-gray-800 font-medium">
                       {exp.role}{" "}
                       <span className="text-sm text-gray-600">
@@ -103,10 +117,20 @@ export default function Experience() {
                     </p>
                     <div
                       className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        isActive ? "max-h-60 mt-4" : "max-h-0"
+                        isActive ? "max-h-60 mt-2" : "max-h-0"
                       }`}
                     >
-                      <p className="text-gray-700">{exp.description}</p>
+                      {exp.description
+                        .trim()
+                        .split("\n")
+                        .map((line, idx) => (
+                          <p
+                            key={idx}
+                            className="text-justify text-gray-800 mb-1 leading-relaxed"
+                          >
+                            {line.trim()}
+                          </p>
+                        ))}
                     </div>
                   </div>
                 </div>
